@@ -6,71 +6,100 @@
     <title>7070 SPORTS AYODHYA</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --bg: #0d0e10; --card: #16181a; --neon: #ccff00; }
-        body { margin:0; font-family: sans-serif; background: var(--bg); color: #fff; font-size: 13px; }
-        header { background: #000; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
-        .hero { height: 35vh; background: #222 url('/static/7070_sports_lko/sachin.jpeg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .container { padding: 20px 5%; }
+        :root { --dark: #0d0e10; --card: #16181a; --neon: #ccff00; }
+        body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--dark); color: #fff; font-size: 13px; line-height: 1.4; }
+        
+        /* HEADER */
+        header { background: #000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 900; font-size: 1.1rem; }
+        .logo span { color: var(--neon); }
+        .wa-btn { background: var(--neon); color: #000; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 11px; }
+
+        /* HERO - SMALL SLEEK */
+        .hero { height: 30vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/7070_sports_lko/sachin.jpeg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero h1 { font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; }
+
+        /* SECTIONS */
+        .container { padding: 25px 5%; }
+        .label { font-size: 11px; text-transform: uppercase; color: var(--neon); font-weight: 800; margin-bottom: 15px; border-left: 3px solid var(--neon); padding-left: 8px; }
+
+        /* GRID */
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #222; }
-        .card img { width: 100%; height: 140px; object-fit: cover; background: #333; }
-        .white-sec { background: #fff; color: #000; padding: 30px 5%; border-top: 4px solid var(--neon); }
-        footer { background: #000; padding: 30px 5%; border-top: 1px solid #222; }
-        .f-col { margin-bottom: 25px; } /* Vertical layout fix */
+        .card img { width: 100%; height: 140px; object-fit: cover; background: #222; }
+        .card p { padding: 8px; font-size: 10px; text-align: center; font-weight: 700; text-transform: uppercase; margin: 0; }
+
+        /* WHITE BOX */
+        .about-white { background: #fff; color: #111; padding: 35px 5%; border-top: 4px solid var(--neon); }
+        .about-white h2 { font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; }
+
+        /* VERTICAL FOOTER */
+        footer { background: #000; padding: 40px 5%; border-top: 1px solid #222; }
+        .foot-col { margin-bottom: 30px; }
+        .foot-col h4 { color: var(--neon); font-size: 11px; margin-bottom: 12px; text-transform: uppercase; }
+        .foot-col p { color: #888; font-size: 11px; margin-bottom: 5px; }
+        .social { display: flex; gap: 15px; }
+        .social i { color: #fff; font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-weight:900;">7070 <span style="color:var(--neon)">SPORTS</span></div>
-    <a href="https://wa.me/919118033485" style="background:var(--neon); color:#000; padding:5px 10px; border-radius:4px; text-decoration:none; font-weight:800; font-size:11px;">WHATSAPP</a>
+    <div class="logo">7070 <span>SPORTS</span></div>
+    <a href="https://wa.me/919118033485" class="wa-btn">WHATSAPP</a>
 </header>
 
 {% if page == "home" %}
-<div class="hero"><h1>PRO SERIES AYODHYA</h1></div>
+    <div class="hero">
+        <h1>PRO SERIES <span style="color:var(--neon)">AYODHYA</span></h1>
+    </div>
 
-<div class="container">
-    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Ambassadors</h2>
-    <div class="grid">
-        {% for amb in ambassadors %}
-        <div class="card">
-            <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/200'">
-            <p style="text-align:center; padding:5px;">{{ amb.name }}</p>
+    <div class="container">
+        <h2 class="label">Ambassadors</h2>
+        <div class="grid">
+            <div class="card"><img src="/static/7070_sports_lko/jagat sarkar.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>JAGAT SARKAR</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/vivek shelar.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>VIVEK SHELAR</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/Sarfaraz Bahubali.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>SARFARAZ BAHUBALI</p></div>
         </div>
-        {% endfor %}
     </div>
-</div>
 
-<div class="white-sec">
-    <h2 style="margin:0;">About 7070 Sports</h2>
-    <p style="font-size:12px; color:#444;">Elite cricket equipment at Ram Path Road, Ayodhya.</p>
-</div>
-
-<div class="container">
-    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Bat Anatomy</h2>
-    <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width:100%; border-radius:8px;" onerror="this.src='https://via.placeholder.com/400x200?text=Check+Image+Name'">
-</div>
-
-<div class="container">
-    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Our Crafting</h2>
-    <div class="grid">
-        <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg"><p style="padding:5px;">Selection</p></div>
-        <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg"><p style="padding:5px;">Finishing</p></div>
+    <div class="about-white">
+        <h2>7070 Sports Ayodhya</h2>
+        <p>Engineered for power. Trusted by champions. Ayodhya's ultimate destination for professional cricket gear.</p>
+        <div style="margin-top:15px; font-size:10px; font-weight:900;">✔ PRO QUALITY  &nbsp; ✔ EXPERT CHOICE</div>
     </div>
-</div>
+
+    <div class="container">
+        <h2 class="label">Bat Anatomy</h2>
+        <div style="background:var(--card); padding:12px; border-radius:6px; border-left:3px solid var(--neon); margin-bottom:15px;">
+            <b style="color:var(--neon); font-size:11px;">DOUBLE-PRESSED CORE</b>
+            <p style="font-size:10px; color:#999; margin:4px 0 0;">Max power for explosive ping.</p>
+        </div>
+        <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width:100%; border-radius:8px;" onerror="this.src='https://via.placeholder.com/500x300/222/ffffff?text=Check+Image+Path'">
+    </div>
+
+    <div class="container" style="padding-top:0;">
+        <h2 class="label">Our Crafting</h2>
+        <div class="grid">
+            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg"><p>Selection</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg"><p>Finishing</p></div>
+        </div>
+    </div>
 {% endif %}
 
 <footer>
-    <div class="f-col">
-        <h4 style="color:var(--neon); margin-bottom:10px;">Visit Us</h4>
-        <p>Ram Path Road, Ayodhya</p>
-        <p>+91 91180 33485</p>
-    </div>
-    <div class="f-col">
-        <h4 style="color:var(--neon); margin-bottom:10px;">Follow Us</h4>
-        <div style="display:flex; gap:15px; font-size:20px;">
-            <i class="fab fa-instagram"></i><i class="fab fa-facebook"></i>
+    <div class="foot-col">
+        <h4>7070 Sports</h4>
+        <p>Premium Cricket Equipment, Ayodhya.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
+    </div>
+    <div class="foot-col">
+        <h4>Visit Us</h4>
+        <p>Ram Path Road, Angoori Bagh, Ayodhya, UP</p>
+        <p>+91 91180 33485</p>
     </div>
 </footer>
 
