@@ -7,100 +7,107 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --dark: #0d0e10; --card: #16181a; --neon: #ccff00; }
-        body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--dark); color: #fff; font-size: 13px; line-height: 1.4; }
+        body { margin:0; font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; font-size: 13px; }
         
-        /* HEADER */
-        header { background: #000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-weight: 900; font-size: 1.1rem; }
-        .logo span { color: var(--neon); }
-        .wa-btn { background: var(--neon); color: #000; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 11px; }
+        /* HEADER RECOVERED */
+        header { 
+            background: #000; padding: 12px 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo-text { font-weight: 900; font-size: 1.2rem; text-transform: uppercase; }
+        .logo-text span { color: var(--neon); }
+        .btn-wa { background: var(--neon); color: #000; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 11px; }
 
-        /* HERO - SMALL SLEEK */
-        .hero { height: 30vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/7070_sports_lko/sachin.jpeg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .hero h1 { font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; }
+        /* HERO RECOVERED */
+        .hero { 
+            height: 35vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/7070_sports_lko/sachin.jpeg') center/cover; 
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
 
-        /* SECTIONS */
+        /* SECTIONS SLEEK */
         .container { padding: 25px 5%; }
         .label { font-size: 11px; text-transform: uppercase; color: var(--neon); font-weight: 800; margin-bottom: 15px; border-left: 3px solid var(--neon); padding-left: 8px; }
 
-        /* GRID */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        /* GRID FIX */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #222; }
-        .card img { width: 100%; height: 140px; object-fit: cover; background: #222; }
-        .card p { padding: 8px; font-size: 10px; text-align: center; font-weight: 700; text-transform: uppercase; margin: 0; }
+        .card img { width: 100%; height: 160px; object-fit: cover; background: #222; }
+        .card p { padding: 10px; font-size: 10px; text-align: center; font-weight: 700; margin: 0; text-transform: uppercase; }
 
-        /* WHITE BOX */
-        .about-white { background: #fff; color: #111; padding: 35px 5%; border-top: 4px solid var(--neon); }
-        .about-white h2 { font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; }
+        /* WHITE BOX RECOVERED */
+        .white-about { background: #fff; color: #111; padding: 40px 5%; border-top: 5px solid var(--neon); }
+        .white-about h2 { font-size: 1.3rem; font-weight: 900; margin-bottom: 10px; }
 
-        /* VERTICAL FOOTER */
+        /* FOOTER RECOVERED & VERTICAL */
         footer { background: #000; padding: 40px 5%; border-top: 1px solid #222; }
-        .foot-col { margin-bottom: 30px; }
-        .foot-col h4 { color: var(--neon); font-size: 11px; margin-bottom: 12px; text-transform: uppercase; }
-        .foot-col p { color: #888; font-size: 11px; margin-bottom: 5px; }
-        .social { display: flex; gap: 15px; }
-        .social i { color: #fff; font-size: 1.2rem; }
+        .f-col { margin-bottom: 30px; }
+        .f-col h4 { color: var(--neon); font-size: 11px; text-transform: uppercase; margin-bottom: 15px; }
+        .f-col p { color: #888; font-size: 11px; margin-bottom: 8px; }
+        .socials { display: flex; gap: 20px; font-size: 1.5rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">7070 <span>SPORTS</span></div>
-    <a href="https://wa.me/919118033485" class="wa-btn">WHATSAPP</a>
+    <div class="logo-text">7070 <span>SPORTS</span></div>
+    <a href="https://wa.me/919118033485" class="btn-wa">WHATSAPP</a>
 </header>
 
 {% if page == "home" %}
     <div class="hero">
-        <h1>PRO SERIES <span style="color:var(--neon)">AYODHYA</span></h1>
+        <h1 style="font-size: 1.5rem;">PRO SERIES <span style="color:var(--neon)">AYODHYA</span></h1>
     </div>
 
     <div class="container">
-        <h2 class="label">Ambassadors</h2>
+        <h2 class="label">Brand Ambassadors</h2>
         <div class="grid">
-            <div class="card"><img src="/static/7070_sports_lko/jagat sarkar.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>JAGAT SARKAR</p></div>
-            <div class="card"><img src="/static/7070_sports_lko/vivek shelar.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>VIVEK SHELAR</p></div>
-            <div class="card"><img src="/static/7070_sports_lko/Sarfaraz Bahubali.jpg" onerror="this.src='https://via.placeholder.com/200'"><p>SARFARAZ BAHUBALI</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/jagat sarkar.jpg" onerror="this.src='https://via.placeholder.com/300'"><p>Jagat Sarkar</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/vivek shelar.jpg" onerror="this.src='https://via.placeholder.com/300'"><p>Vivek Shelar</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/Sarfaraz Bahubali.jpg" onerror="this.src='https://via.placeholder.com/300'"><p>Sarfaraz Bahubali</p></div>
         </div>
     </div>
 
-    <div class="about-white">
-        <h2>7070 Sports Ayodhya</h2>
-        <p>Engineered for power. Trusted by champions. Ayodhya's ultimate destination for professional cricket gear.</p>
+    <div class="white-about">
+        <h2>About 7070 Sports Ayodhya</h2>
+        <p>Engineered for power. Trusted by champions. Located at Ram Path Road, we provide elite equipment for professional cricketers.</p>
         <div style="margin-top:15px; font-size:10px; font-weight:900;">✔ PRO QUALITY  &nbsp; ✔ EXPERT CHOICE</div>
     </div>
 
     <div class="container">
-        <h2 class="label">Bat Anatomy</h2>
-        <div style="background:var(--card); padding:12px; border-radius:6px; border-left:3px solid var(--neon); margin-bottom:15px;">
+        <h2 class="label">7070 Bat Anatomy</h2>
+        <div style="background:var(--card); padding:15px; border-radius:8px; border-left:4px solid var(--neon); margin-bottom:15px;">
             <b style="color:var(--neon); font-size:11px;">DOUBLE-PRESSED CORE</b>
-            <p style="font-size:10px; color:#999; margin:4px 0 0;">Max power for explosive ping.</p>
+            <p style="font-size:10px; color:#999; margin:5px 0 0;">Ensures explosive power for tennis ball cricket.</p>
         </div>
-        <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width:100%; border-radius:8px;" onerror="this.src='https://via.placeholder.com/500x300/222/ffffff?text=Check+Image+Path'">
+        <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width:100%; border-radius:10px;" onerror="this.src='https://via.placeholder.com/600x400/222/ffffff?text=Anatomy+Image+Check'">
     </div>
 
     <div class="container" style="padding-top:0;">
         <h2 class="label">Our Crafting</h2>
         <div class="grid">
-            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg"><p>Selection</p></div>
-            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg"><p>Finishing</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg"><p>Grade-1 Selection</p></div>
+            <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg"><p>Master Shaping</p></div>
         </div>
     </div>
 {% endif %}
 
 <footer>
-    <div class="foot-col">
-        <h4>7070 Sports</h4>
-        <p>Premium Cricket Equipment, Ayodhya.</p>
-        <div class="social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
+    <div class="f-col">
+        <h4>7070 Sports Ayodhya</h4>
+        <p>Premium Cricket Gear Designed for Performance.</p>
+        <div class="socials">
+            <a href="#" style="color:#fff;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color:#fff;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color:#fff;"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-    <div class="foot-col">
+    <div class="f-col">
         <h4>Visit Us</h4>
         <p>Ram Path Road, Angoori Bagh, Ayodhya, UP</p>
         <p>+91 91180 33485</p>
     </div>
+    <p style="text-align:center; font-size:9px; opacity:0.3; margin-top:20px;">© 2026 7070 SPORTS AYODHYA</p>
 </footer>
 
 </body>
