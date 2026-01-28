@@ -6,20 +6,73 @@
     <title>7070 SPORTS AYODHYA</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { 
-            --charcoal: #0d0e10; 
-            --card-bg: #16181a;
-            --accent: #ccff00; 
-            --text-dim: #999;
-        }
-        
-        /* Base Styles - Sleek & Small Font */
-        body { margin:0; font-family: 'Inter', sans-serif; background: var(--charcoal); color: #fff; font-size: 13px; line-height: 1.4; }
-        
-        /* Compact Header */
-        header { 
-            background: rgba(13, 14, 16, 0.95); padding: 10px 5%; 
-            display: flex; justify-content: space-between; align-items: center; 
-            border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000;
-        }
-        .logo { font-weight: 900; font
+        :root { --bg: #0d0e10; --card: #16181a; --neon: #ccff00; }
+        body { margin:0; font-family: sans-serif; background: var(--bg); color: #fff; font-size: 13px; }
+        header { background: #000; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+        .hero { height: 35vh; background: #222 url('/static/7070_sports_lko/sachin.jpeg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .container { padding: 20px 5%; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #222; }
+        .card img { width: 100%; height: 140px; object-fit: cover; background: #333; }
+        .white-sec { background: #fff; color: #000; padding: 30px 5%; border-top: 4px solid var(--neon); }
+        footer { background: #000; padding: 30px 5%; border-top: 1px solid #222; }
+        .f-col { margin-bottom: 25px; } /* Vertical layout fix */
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="font-weight:900;">7070 <span style="color:var(--neon)">SPORTS</span></div>
+    <a href="https://wa.me/919118033485" style="background:var(--neon); color:#000; padding:5px 10px; border-radius:4px; text-decoration:none; font-weight:800; font-size:11px;">WHATSAPP</a>
+</header>
+
+{% if page == "home" %}
+<div class="hero"><h1>PRO SERIES AYODHYA</h1></div>
+
+<div class="container">
+    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Ambassadors</h2>
+    <div class="grid">
+        {% for amb in ambassadors %}
+        <div class="card">
+            <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/200'">
+            <p style="text-align:center; padding:5px;">{{ amb.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="white-sec">
+    <h2 style="margin:0;">About 7070 Sports</h2>
+    <p style="font-size:12px; color:#444;">Elite cricket equipment at Ram Path Road, Ayodhya.</p>
+</div>
+
+<div class="container">
+    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Bat Anatomy</h2>
+    <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width:100%; border-radius:8px;" onerror="this.src='https://via.placeholder.com/400x200?text=Check+Image+Name'">
+</div>
+
+<div class="container">
+    <h2 style="color:var(--neon); font-size:12px; text-transform:uppercase;">Our Crafting</h2>
+    <div class="grid">
+        <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg"><p style="padding:5px;">Selection</p></div>
+        <div class="card"><img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg"><p style="padding:5px;">Finishing</p></div>
+    </div>
+</div>
+{% endif %}
+
+<footer>
+    <div class="f-col">
+        <h4 style="color:var(--neon); margin-bottom:10px;">Visit Us</h4>
+        <p>Ram Path Road, Ayodhya</p>
+        <p>+91 91180 33485</p>
+    </div>
+    <div class="f-col">
+        <h4 style="color:var(--neon); margin-bottom:10px;">Follow Us</h4>
+        <div style="display:flex; gap:15px; font-size:20px;">
+            <i class="fab fa-instagram"></i><i class="fab fa-facebook"></i>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
