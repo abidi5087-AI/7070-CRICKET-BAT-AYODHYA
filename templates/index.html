@@ -3,120 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7070 SPORTS AYODHYA | PRO SERIES</title>
+    <title>7070 CRICKET BAT AYODHYA | PREMIUM GEAR</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { 
-            --mint-green: #2ecc71; 
-            --dark-bg: #0a0a0a; 
-            --card-bg: #141414; 
-            --text-gray: #888;
-        }
+        :root { --brand-green: #1a3c0e; --brand-yellow: #f1c40f; --dark-bg: #0d0d0d; --card-bg: #161616; }
+        body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--dark-bg); color: #fff; overflow-x: hidden; }
         
-        /* Font and Base Reset */
-        body { margin:0; font-family: 'Inter', 'Segoe UI', sans-serif; background-color: var(--dark-bg); color: #ffffff; overflow-x: hidden; }
-
-        /* HEADER - GLASS EFFECT */
-        .site-header { 
-            background: rgba(10, 10, 10, 0.9); 
-            padding: 10px 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 1px solid var(--mint-green); 
-            position: sticky; top: 0; z-index: 1000; 
-            backdrop-filter: blur(10px);
-        }
-        .logo-box { font-weight: 900; font-size: 1.2rem; color: #fff; text-transform: uppercase; }
-        .logo-box span { color: var(--mint-green); }
-
-        /* COMPACT HERO */
-        .hero { position: relative; height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/7070_sports_lko/sachin.jpeg'); background-size: cover; background-position: center; }
-        .hero-h1 { font-size: 1.6rem; font-weight: 900; margin: 0; color: #fff; }
-
-        /* SECTIONS */
-        .container { padding: 30px 5%; }
-        .section-title { font-size: 1.3rem; color: var(--mint-green); margin-bottom: 20px; font-weight: 800; border-left: 4px solid var(--mint-green); padding-left: 12px; }
-
-        /* GRID FIX */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-        .card { background: var(--card-bg); border-radius: 12px; border: 1px solid #222; overflow: hidden; text-align: center; }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card p { padding: 10px; font-size: 0.8rem; font-weight: 600; margin: 0; }
-
-        /* WHITE ABOUT SECTION (SCREENSHOT STYLE) */
-        .about-white { background: #ffffff; color: #222; padding: 40px 20px; border-top: 5px solid var(--mint-green); }
-        .about-white h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
-        .about-white p { font-size: 13px; line-height: 1.6; color: #444; margin-bottom: 15px; }
-
-        /* FOOTER */
-        .footer { background: #050505; padding: 40px 5% 20px; border-top: 1px solid #1a1a1a; text-align: center; }
-        .footer h4 { color: var(--mint-green); font-size: 1rem; margin-bottom: 15px; }
-        .footer p { font-size: 0.75rem; color: #666; margin: 5px 0; }
-        .socials { display: flex; justify-content: center; gap: 20px; margin: 15px 0; }
-        .socials i { color: #fff; font-size: 1.3rem; }
-
-        /* BUTTONS */
-        .btn { background: var(--mint-green); color: #000; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.7rem; }
+        /* SLEEK HEADER */
+        .site-header { background: rgba(0, 0, 0, 0.95); padding: 8px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--brand-yellow); position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px); }
+        
+        /* HERO COMPACT */
+        .hero-viewport { position: relative; height: 50vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+        #hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; background-position: center; transition: 1.5s; filter: brightness(0.4); }
+        
+        /* REDUCED GAPS */
+        .container { padding: 25px 4%; }
+        .section-title { text-align: center; color: var(--brand-yellow); font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
+        
+        /* SLEEK CARDS */
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+        .item-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid #222; transition: 0.3s; text-align: center; }
+        .item-card img { width: 100%; height: 220px; object-fit: cover; }
+        .item-card p { padding: 8px; font-size: 0.8rem; font-weight: 600; }
+        
+        /* ABOUT SECTION (WHITE BACKGROUND STYLE LIKE SCREENSHOT) */
+        .about-white-box { background: #ffffff; padding: 30px 20px; border-radius: 0; color: #333; margin-top: 10px; border-top: 5px solid var(--brand-yellow); }
+        .about-white-box h2 { color: #000; font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; text-transform: none; }
+        .about-white-box p { font-size: 13px; line-height: 1.5; color: #555; text-align: left; margin-bottom: 15px; }
+        
+        .feature-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px; }
+        .mini-feature { display: flex; align-items: center; gap: 8px; }
+        .mini-feature i { color: #2d5a27; font-size: 1rem; }
+        .mini-feature div b { font-size: 12px; color: #000; display: block; }
+        .mini-feature div span { font-size: 10px; color: #888; }
     </style>
 </head>
 <body>
 
 <header class="site-header">
-    <div class="logo-box">7070 <span>SPORTS</span></div>
-    <div style="display: flex; gap: 10px;">
-        <a href="/bats" class="btn"><i class="fas fa-shopping-cart"></i></a>
-        <a href="https://wa.me/919118033485" style="background:#25D366; color:#fff;" class="btn"><i class="fab fa-whatsapp"></i></a>
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <img src="/static/7070_sports_lko/logo.jpeg" style="height: 35px; width: 35px; border-radius: 50%; border: 1px solid var(--brand-yellow); object-fit: cover;">
+        <div style="font-weight: 900; font-size: 1rem; color: #fff;">7070 <span style="color:#f1c40f">SPORTS</span></div>
     </div>
+    <nav style="display: flex; gap: 8px;">
+        <a href="/bats" style="background: #f1c40f; color: black; padding: 6px 12px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.65rem;"><i class="fas fa-shopping-cart"></i> SHOP</a>
+        <a href="https://wa.me/919118033485" style="background: #25D366; color: white; padding: 6px 12px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.65rem;"><i class="fab fa-whatsapp"></i> HELP</a>
+    </nav>
 </header>
 
 {% if page == "home" %}
-    <div class="hero">
-        <h1 class="hero-h1">7070 CRICKETS <span style="color:var(--mint-green)">AYODHYA</span></h1>
+    <div class="hero-viewport">
+        <div id="hero-bg"></div>
+        <div style="z-index: 10; padding: 20px;">
+            <h1 style="font-size: 1.8rem; color: var(--brand-yellow); font-weight:900; margin:0;">7070 SPORTS AYODHYA</h1>
+            <p style="font-size: 0.9rem; margin-top: 5px;">Premium Professional Cricket Gear</p>
+            <a href="/bats" style="background: var(--brand-yellow); color: #000; padding: 10px 25px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; margin-top: 15px; font-size: 0.8rem;">EXPLORE</a>
+        </div>
     </div>
 
     <div class="container">
-        <h2 class="section-title">Brand Ambassadors</h2>
-        <div class="grid">
+        <h2 class="section-title">Ambassadors</h2>
+        <div class="content-grid">
             {% for amb in ambassadors %}
-            <div class="card">
-                <img src="/static/7070_sports_lko/{{ amb.img }}">
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/200x250'">
                 <p>{{ amb.name }}</p>
             </div>
             {% endfor %}
         </div>
     </div>
 
-    <div class="about-white">
-        <div style="max-width: 800px; margin: 0 auto;">
+    <div class="about-white-box">
+        <div class="container" style="padding:0;">
             <h2>7070 Sports Ayodhya</h2>
-            <p>7070 Sports Ayodhya is a rising name in the Indian sportswear scene. Inspired by the sacred Ram Path Road, we deliver professional-grade equipment that matches your passion on the field.</p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-top: 1px solid #eee; padding-top: 15px;">
-                <div style="font-size: 11px;"><b>✔ Quality Guaranteed</b></div>
-                <div style="font-size: 11px;"><b>✔ Expert Choice</b></div>
+            <p>7070 Sports Ayodhya is a rising name in the Indian sportswear scene and a proud franchise of the renowned 7070 Sports brand. Inspired by the sacred land of Ram Path Road, we provide elite equipment to help players perform at their best.</p>
+            <p>Known for quality and affordability, our range includes 7070 t-shirts, premium bats, track pants, and professional tennis balls trusted by athletes across Uttar Pradesh.</p>
+            
+            <div class="feature-mini-grid">
+                <div class="mini-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <div><b>Quality Guaranteed</b><span>Premium products</span></div>
+                </div>
+                <div class="mini-feature">
+                    <i class="fas fa-user-shield"></i>
+                    <div><b>Expert Advice</b><span>Professional guidance</span></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="background: #000; padding-top: 40px; padding-bottom: 20px;">
         <h2 class="section-title">7070 Bat Anatomy</h2>
-        <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; margin-bottom: 20px;">
-            <p style="font-size: 13px; line-height: 1.5;">Our bats feature <b>Double-Pressed Technology</b> and <b>12-piece cane handles</b> for the perfect ping.</p>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="border-left: 3px solid var(--brand-yellow); padding-left: 12px;">
+                <b style="color:var(--brand-yellow); font-size: 0.9rem;">DOUBLE-PRESSED CORE</b>
+                <p style="color: #999; font-size: 0.75rem; margin: 3px 0;">Maximum power for explosive ping.</p>
+            </div>
+            <div style="border-left: 3px solid var(--brand-yellow); padding-left: 12px;">
+                <b style="color:var(--brand-yellow); font-size: 0.9rem;">DUCK-BILL PROFILE</b>
+                <p style="color: #999; font-size: 0.75rem; margin: 3px 0;">Aerodynamic shape for light pickup.</p>
+            </div>
+            <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width: 100%; border-radius: 12px; margin-top: 10px;">
         </div>
-        <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #333;">
+    </div>
+
+    <div class="container" style="padding-top: 10px;">
+        <h2 class="section-title">Our Crafting</h2>
+        <div class="content-grid">
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg" style="height: 150px;">
+                <p style="font-size: 0.7rem;">Grade-1 Selection</p>
+            </div>
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg" style="height: 150px;">
+                <p style="font-size: 0.7rem;">Master Shaping</p>
+            </div>
+        </div>
     </div>
 
 {% elif page == "bats" %}
     <div class="container">
         <h1 class="section-title">Professional Collection</h1>
-        <div class="grid">
+        <div class="content-grid">
             {% for bat in bats %}
-            <div class="card">
+            <div class="item-card">
                 <img src="/static/7070_sports_lko/{{ bat.img }}">
-                <div style="padding: 10px;">
-                    <p style="color:var(--mint-green)">{{ bat.name }}</p>
-                    <p>{{ bat.price }}</p>
-                    <a href="https://wa.me/919118033485" class="btn" style="display:block; margin-top:5px; font-size: 0.6rem;">ORDER NOW</a>
+                <div style="padding:10px;">
+                    <h3 style="font-size: 0.9rem; margin: 5px 0;">{{ bat.name }}</h3>
+                    <p style="color:var(--brand-yellow); font-size:1.1rem; margin: 5px 0;">{{ bat.price }}</p>
+                    <a href="https://wa.me/919118033485" style="background:#25D366; color:white; padding:8px; display:block; text-decoration:none; border-radius:8px; font-size: 0.7rem; font-weight:bold;">ORDER NOW</a>
                 </div>
             </div>
             {% endfor %}
@@ -124,16 +139,24 @@
     </div>
 {% endif %}
 
-<footer class="footer">
-    <h4>7070 SPORTS AYODHYA</h4>
-    <p>Ram Path Road, Angoori Bagh, Ayodhya, UP</p>
-    <div class="socials">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+<footer style="background: #000; padding: 40px 6% 20px; border-top: 2px solid var(--brand-yellow); text-align: center; color: #666;">
+    <div style="font-size: 0.8rem;">
+        <p style="color:#fff;">7070 SPORTS AYODHYA</p>
+        <p>Ram Path Road, Angoori Bagh, Ayodhya</p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin: 15px 0; font-size: 1.2rem; color: #fff;">
+            <i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i><i class="fab fa-facebook"></i>
+        </div>
+        <p style="font-size: 0.6rem;">© 2026 ALL RIGHTS RESERVED</p>
     </div>
-    <p>© 2026 DESIGNED FOR PERFORMANCE</p>
 </footer>
+
+<script>
+    const sliderImgs = ["/static/7070_sports_lko/sachin.jpeg", "/static/7070_sports_lko/sachin2.jpeg", "/static/7070_sports_lko/sachin3.jpeg"];
+    let slideIdx = 0;
+    const heroBg = document.getElementById('hero-bg');
+    function slideHero() { if(heroBg) { heroBg.style.backgroundImage = `url('${sliderImgs[slideIdx]}')`; slideIdx = (slideIdx+1)%sliderImgs.length; } }
+    slideHero(); setInterval(slideHero, 4000);
+</script>
 
 </body>
 </html>
