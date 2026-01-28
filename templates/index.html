@@ -1,1 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7070 CRICKET BAT AYODHYA | BEST PREMIUM BATS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --brand-green: #1a3c0e; --brand-yellow: #f1c40f; --dark-bg: #0d0d0d; --card-bg: #161616; }
+        body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--dark-bg); color: #fff; overflow-x: hidden; }
+        .site-header { background: rgba(26, 60, 14, 0.98); padding: 10px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--brand-yellow); position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px); }
+        .logo-round { height: 40px; width: 40px; border-radius: 50%; border: 1px solid var(--brand-yellow); object-fit: cover; }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
+        .hero-viewport { position: relative; height: 70vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+        #hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; background-position: center; transition: 1.5s; filter: brightness(0.4); }
+        .container { padding: 40px 8%; }
+        .section-title { text-align: center; color: var(--brand-yellow); font-size: 2.2rem; margin-bottom: 40px; text-transform: uppercase; }
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        .item-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #222; transition: 0.3s; text-align: center; }
+        .item-card img { width: 100%; height: 380px; object-fit: cover; }
+        .read-btn { background: var(--brand-yellow); color: #000; border: none; padding: 12px 35px; font-weight: 800; cursor: pointer; border-radius: 50px; margin-top: 25px; transition: 0.3s; }
+        .social-block { background: #111; padding: 40px; border-radius: 20px; text-align: center; border: 1px solid #333; margin: 40px 0; }
+        .footer { background: #000; padding: 50px 8% 20px; border-top: 4px solid var(--brand-green); color: #888; }
+    </style>
+</head>
+<body>
 
+    <header class="site-header" style="background: rgba(0, 0, 0, 0.95); padding: 12px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1c40f; position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="{{ url_for('static', filename='7070_sports_lko/logo.jpeg') }}" style="height: 45px; width: 45px; border-radius: 50%; border: 2px solid #f1c40f; object-fit: cover;">
+        <div style="font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; color: #fff;">7070 <span style="color:#f1c40f">SPORTS</span></div>
+    </div>
+    <nav style="display: flex; align-items: center; gap: 10px;">
+        <a href="/" style="color: #fff; text-decoration: none; font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Home</a>
+        <a href="/bats" style="background: #f1c40f; color: black; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;"><i class="fas fa-shopping-cart"></i> SHOP NOW</a>
+        <a href="https://wa.me/919118033485" style="background: #25D366; color: white; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+    </nav>
+</header>
+
+    {% if page == "home" %}
+        <div class="hero-viewport">
+            <div id="hero-bg"></div>
+            <div style="z-index: 10;">
+                <h1 style="font-size: 3.5rem; color: var(--brand-yellow); font-weight:900; margin:0;">7070 CRICKET BAT AYODHYA</h1>
+                <p style="font-size: 1.4rem;">The Ultimate Destination for Tennis Cricket Professionals</p>
+                <a href="/bats" style="background: var(--brand-yellow); color: #000; padding: 15px 40px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; margin-top: 20px;">EXPLORE COLLECTION</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="section-title">Brand Ambassadors</h2>
+            <div class="content-grid">
+                {% for amb in ambassadors %}
+                <div class="item-card">
+                    <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
+                    <p style="padding:15px; font-weight:bold;">{{ amb.name }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">Event Highlights</h2>
+            <div class="content-grid">
+                {% for item in gallery %}
+                <div class="item-card">
+                    <img src="/static/7070_sports_lko/{{ item.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
+                    <p style="padding:15px; font-size:0.9rem;">{{ item.title }}</p>
+                </div>
+                {% endfor %}
+                </div>
+            <div style="margin-top: 80px; clear: both; width: 100%; height: 20px;"></div>
+
+<div style="background: rgba(255,255,255,0.03); padding: 45px; border-radius: 20px; border-left: 5px solid var(--brand-yellow); margin-bottom: 40px;">
+    <h2 style="color: var(--brand-yellow); font-size: 2.2rem; text-transform: uppercase;">WHY JOIN 7070 SPORTS?</h2>
+    <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem;">
+        7070 Sports Ayodhya is not just a store, it's a legacy. We provide elite equipment to help local talent perform at their best.
+    </p>
+
+    <div id="pro-about-more" style="display: none; margin-top: 20px; border-top: 1px solid #444; padding-top: 15px;">
+        <p style="color: #bbb;">With over 500+ franchises across India, we are the fastest-growing brand in tennis cricket. Our equipment is trusted by legends like Jagat Sarkar and Vivek Shelar.</p>
+    </div>
+
+    <button onclick="toggleProAbout()" id="proAboutBtn" style="background: var(--brand-yellow); color: #000; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 800; cursor: pointer; margin-top: 20px;">
+        READ FULL STORY
+    </button>
+</div>
+
+
+            <div class="container" style="margin-top: 100px; margin-bottom: 60px;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">7070 BAT ANATOMY</h2>
+    <div style="background: rgba(255,255,255,0.02); padding: 40px; border-radius: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; border: 1px solid #222;">
+
+        <div>
+            <div style="margin-bottom: 25px; border-left: 3px solid var(--brand-yellow); padding-left: 15px;">
+                <h4 style="color: var(--brand-yellow); font-size: 1.3rem;">DOUBLE-PRESSED CORE</h4>
+                <p style="color: #bbb; font-size: 0.95rem;">Maximum power aur explosive ping ke liye do baar press kiya gaya willow.</p>
+            </div>
+            <div style="margin-bottom: 25px; border-left: 3px solid var(--brand-yellow); padding-left: 15px;">
+                <h4 style="color: var(--brand-yellow); font-size: 1.3rem;">12-PIECE CANE HANDLE</h4>
+                <p style="color: #bbb; font-size: 0.95rem;">Professional Sarawak cane handle jo har jhatke (vibration) ko absorb kar leta hai.</p>
+            </div>
+            <div style="margin-bottom: 25px; border-left: 3px solid var(--brand-yellow); padding-left: 15px;">
+                <h4 style="color: var(--brand-yellow); font-size: 1.3rem;">DUCK-BILL PROFILE</h4>
+                <p style="color: #bbb; font-size: 0.95rem;">Aerodynamic shape jo bat ka pickup halka aur swing speed tez karti hai.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg"
+                 style="max-width: 100%; height: auto; border-radius: 15px; filter: drop-shadow(0 0 20px rgba(255,215,0,0.2));"
+                 onerror="this.src='https://via.placeholder.com/400x600?text=7070+Bat+Image'">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 80px; margin-bottom: 100px;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">OUR CRAFTING PROCESS</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+        <div style="background: #111; padding: 20px; border-radius: 20px; text-align: center; border-bottom: 4px solid var(--brand-yellow);">
+            <div style="height: 250px; overflow: hidden; border-radius: 10px; margin-bottom: 15px;">
+                <img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.29 PM (2).jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: var(--brand-yellow);">01. GRADE-1 SELECTION</h4>
+            <p style="color: #999; font-size: 0.85rem;">Hum chunhte hain sirf top quality Kashmir Willow.</p>
+        </div>
+
+        <div style="background: #111; padding: 20px; border-radius: 20px; text-align: center; border-bottom: 4px solid var(--brand-yellow);">
+            <div style="height: 250px; overflow: hidden; border-radius: 10px; margin-bottom: 15px;">
+                <img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.20 PM.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: var(--brand-yellow);">02. MASTER SHAPING</h4>
+            <p style="color: #999; font-size: 0.85rem;">Har bat ko haath se shape diya jata hai perfect balance ke liye.</p>
+        </div>
+
+        <div style="background: #111; padding: 20px; border-radius: 20px; text-align: center; border-bottom: 4px solid var(--brand-yellow);">
+            <div style="height: 250px; overflow: hidden; border-radius: 10px; margin-bottom: 15px;">
+                <img src="/static/7070_sports_lko/WhatsApp Image 2026-01-26 at 10.32.14 PM.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: var(--brand-yellow);">03. FINAL PING TEST</h4>
+            <p style="color: #999; font-size: 0.85rem;">Dispatch se pehle har bat ka ping test kiya jata hai.</p>
+        </div>
+
+    </div>
+</div>
+
+            <div style="background: linear-gradient(90deg, #000 0%, #1a1a1a 100%); padding: 60px 0; margin-top: 80px; border-top: 2px solid var(--brand-yellow); border-bottom: 2px solid var(--brand-yellow);">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+
+            <div>
+                <h2 style="color: var(--brand-yellow); font-size: 3rem; font-weight: 900; margin-bottom: 5px;">500+</h2>
+                <p style="color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Franchises India</p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--brand-yellow); font-size: 3rem; font-weight: 900; margin-bottom: 5px;">10k+</h2>
+                <p style="color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Happy Players</p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--brand-yellow); font-size: 3rem; font-weight: 900; margin-bottom: 5px;">Grade-1</h2>
+                <p style="color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Kashmir Willow</p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--brand-yellow); font-size: 3rem; font-weight: 900; margin-bottom: 5px;">100%</h2>
+                <p style="color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Hand Crafted</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+            <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">CARE FOR YOUR WEAPON</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+        <div style="background: #111; padding: 30px; border-radius: 15px; border: 1px dashed var(--brand-yellow); text-align: center;">
+            <i class="fas fa-oil-can" style="color: var(--brand-yellow); font-size: 2.5rem; margin-bottom: 15px;"></i>
+            <h4 style="color: var(--brand-yellow);">PRO OILING</h4>
+            <p style="color: #bbb; font-size: 0.9rem;">Raw linseed oil ki halki layer lagayein taaki willow ka moisture bana rahe.</p>
+        </div>
+
+        <div style="background: #111; padding: 30px; border-radius: 15px; border: 1px dashed var(--brand-yellow); text-align: center;">
+            <i class="fas fa-hammer" style="color: var(--brand-yellow); font-size: 2.5rem; margin-bottom: 15px;"></i>
+            <h4 style="color: var(--brand-yellow);">PRO KNOCKING</h4>
+            <p style="color: #bbb; font-size: 0.9rem;">7070 bats pre-knocked aate hain, lekin edges ko extra protect karein.</p>
+        </div>
+
+        <div style="background: #111; padding: 30px; border-radius: 15px; border: 1px dashed var(--brand-yellow); text-align: center;">
+            <i class="fas fa-box-open" style="color: var(--brand-yellow); font-size: 2.5rem; margin-bottom: 15px;"></i>
+            <h4 style="color: var(--brand-yellow);">SAFE STORAGE</h4>
+            <p style="color: #bbb; font-size: 0.9rem;">Bat ko hamesha thandi aur sookhi jagah par rakhein, direct dhoop se bachayein.</p>
+        </div>
+
+    </div>
+</div>
+
+
+            <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;">ENGINEERED FOR CHAMPIONS</h2>
+        <div style="width: 80px; height: 4px; background: var(--brand-yellow); margin: 0 auto;"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+
+        <div style="background: #111; padding: 40px; border-radius: 24px; transition: 0.3s; border: 1px solid #222; text-align: left;">
+            <div style="background: rgba(255, 215, 0, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <i class="fas fa-bolt" style="color: var(--brand-yellow); font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.2rem;">Lightning Pickup</h3>
+            <p style="color: #888; font-size: 0.95rem; line-height: 1.6;">Design aisa ki 1200gm ka bat bhi hath mein 1000gm jaisa feel ho.</p>
+        </div>
+
+        <div style="background: #111; padding: 40px; border-radius: 24px; transition: 0.3s; border: 1px solid #222; text-align: left;">
+            <div style="background: rgba(255, 215, 0, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <i class="fas fa-shield-alt" style="color: var(--brand-yellow); font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.2rem;">Edge Protection</h3>
+            <p style="color: #888; font-size: 0.95rem; line-height: 1.6;">Extra thick edges jo miss-hit par bhi ball ko boundary ke paar pahunchayein.</p>
+        </div>
+
+        <div style="background: #111; padding: 40px; border-radius: 24px; transition: 0.3s; border: 1px solid #222; text-align: left;">
+            <div style="background: rgba(255, 215, 0, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <i class="fas fa-gem" style="color: var(--brand-yellow); font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.2rem;">A-Grade Finish</h3>
+            <p style="color: #888; font-size: 0.95rem; line-height: 1.6;">Premium wax polishing jo bat ko moisture aur dhool se bachaye rakhe.</p>
+        </div>
+
+    </div>
+</div>
+
+            <div class="container" style="margin-top: 80px; margin-bottom: 100px; max-width: 800px;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">QUESTIONS? WE HAVE ANSWERS</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 15px;">
+
+        <div style="background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px;">
+            <h4 style="color: var(--brand-yellow); margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
+                7070 Bats itne lightweight kaise hote hain?
+            </h4>
+            <p style="color: #999; font-size: 0.95rem; line-height: 1.6;">
+                Hum professional duck-bill profile aur deep spine carving technique ka use karte hain, jo bat ka weight distribution aisa kar deta hai ki pickup ekdum halka mehsoos ho.
+            </p>
+        </div>
+
+        <div style="background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px;">
+            <h4 style="color: var(--brand-yellow); margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-truck" style="margin-right: 10px;"></i>
+                Kya aap poore India mein delivery karte hain?
+            </h4>
+            <p style="color: #999; font-size: 0.95rem; line-height: 1.6;">
+                Ji haan! Humari 500+ franchises ke network ki wajah se hum har kone mein safe aur fast delivery provide karte hain.
+            </p>
+        </div>
+
+        <div style="background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px;">
+            <h4 style="color: var(--brand-yellow); margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-certificate" style="margin-right: 10px;"></i>
+                Kashmir Willow aur English Willow mein kya fark hai?
+            </h4>
+            <p style="color: #999; font-size: 0.95rem; line-height: 1.6;">
+                Kashmir willow zyada durable aur hard-hitting hota hai, jo tennis cricket ball ke liye sabse best mana jata hai.
+            </p>
+        </div>
+
+    </div>
+</div>
+    {% elif page == "bats" %}
+        <div class="container">
+            <h1 class="section-title">Professional Bat Engineering</h1>
+
+            <div style="background: rgba(255,255,255,0.03); padding: 45px; border-radius: 20px; border-left: 6px solid var(--brand-yellow); margin-bottom: 60px;">
+                <h2 style="color: var(--brand-yellow); font-size: 2.2rem;">THE SCIENCE OF POWER</h2>
+                <div style="color: #ddd; line-height: 1.9; text-align: justify;">
+                    <p>Every bat is hand-selected premium Kashmir Willow, designed for elite performance.</p>
+                    <div id="bat-master-text" style="display: none; margin-top: 20px;">
+                        <p>Our <strong>Double-Pressed Technology</strong> and <strong>12-piece Sarawak cane handles</strong> ensure maximum ping and zero vibration. The aerodynamic Duck-bill profile provides a light pickup for lightning-fast shots.</p>
+                    </div>
+                    <button onclick="toggleBatMaster()" id="batMasterBtn" class="read-btn">READ TECHNICAL SPECS</button>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                {% for bat in bats %}
+                <div class="item-card">
+                    <img src="/static/7070_sports_lko/{{ bat.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
+                    <div style="padding:20px;">
+                        <h3>{{ bat.name }}</h3>
+                        <p style="color:var(--brand-yellow); font-size:1.6rem; font-weight:bold;">{{ bat.price }}</p>
+                        <a href="https://wa.me/919118033485" style="background:#25D366; color:white; padding:12px; display:block; text-decoration:none; border-radius:10px; font-weight:bold;">ORDER NOW</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="container" style="padding-top: 20px; padding-bottom: 20px;">
+    <div style="background: linear-gradient(145deg, #111, #0a0a0a); padding: 40px; border-radius: 25px; border: 1px solid #222; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.5);">
+        <h2 style="color: var(--brand-yellow); font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Connect with 7070 Community</h2>
+        <p style="color: #888; margin-bottom: 30px; font-size: 1rem;">Latest updates, tournament highlights, and gear launches.</p>
+
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+            <a href="https://instagram.com/7070sports" target="_blank" style="text-decoration: none; color: #fff; width: 120px; transition: 0.4s;" class="social-card">
+                <div style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin: 0 auto 15px; font-size: 2.2rem; box-shadow: 0 10px 20px rgba(214, 36, 159, 0.3);">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span style="font-weight: 700; font-size: 0.9rem; letter-spacing: 1px;">INSTAGRAM</span>
+            </a>
+
+            <a href="https://facebook.com/share/182jz8bkZF/" target="_blank" style="text-decoration: none; color: #fff; width: 120px; transition: 0.4s;" class="social-card">
+                <div style="background: #1877F2; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin: 0 auto 15px; font-size: 2.2rem; box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span style="font-weight: 700; font-size: 0.9rem; letter-spacing: 1px;">FACEBOOK</span>
+            </a>
+
+            <a href="https://youtube.com/@7070sports" target="_blank" style="text-decoration: none; color: #fff; width: 120px; transition: 0.4s;" class="social-card">
+                <div style="background: #FF0000; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin: 0 auto 15px; font-size: 2.2rem; box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <span style="font-weight: 700; font-size: 0.9rem; letter-spacing: 1px;">YOUTUBE</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .social-card:hover { transform: translateY(-10px); }
+    .social-card:hover span { color: var(--brand-yellow); }
+</style>
+
+    <div class="container" style="padding-top: 30px; margin-bottom: 50px;">
+    <div style="background: rgba(255,255,255,0.03); padding: 60px; border-radius: 40px; border-top: 6px solid var(--brand-yellow); box-shadow: 0 30px 70px rgba(0,0,0,0.7); position: relative; overflow: hidden;">
+
+        <h2 style="color: var(--brand-yellow); font-size: 3rem; margin-top: 0; text-transform: uppercase; letter-spacing: 3px; line-height: 1.2;">7070 Sports Ayodhya:<br><span style="color:#fff; font-size: 1.8rem;">The Heartland of Cricket Excellence</span></h2>
+
+        <div style="color: #e0e0e0; line-height: 2.2; font-size: 1.2rem; text-align: justify;">
+            <p><strong>7070 Sports Ayodhya</strong> sirf ek business nahi, balki ek vision hai jo humne Ram Path Road, Angoori Bagh ki pavitra dharti par shuru kiya hai. Hamara maqsad hai har us player ko international level ki suvidhayein aur equipment dena jo apne sapno ko sach karna chahta hai. 7070 Sports India ka flagship partner hone ke naate, hum desh ke <strong>500+ franchises</strong> ke bharose ko garv ke saath Ayodhya mein pesh karte hain.</p>
+
+            <p>Jab baat performance ki aati hai, toh 7070 ka naam sabse upar liya jata hai. Hum samajhte hain ki ek professional cricketer ke liye uske gear ki kya ahmiyat hoti hai. Ek chota sa balance ka antar match ka nateeja badal sakta hai. Isiliye hum har bat aur har pad ko bariki se check karte hain taaki aapko mile sirf aur sirf perfection.</p>
+
+            <div id="mega-legacy-content" style="display: none; margin-top: 35px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+
+                <h3 style="color: var(--brand-yellow); font-size: 2rem;">1. Engineering the Impossible: Double-Pressed Tech</h3>
+                <p>Hamari sabse badi pehchan hai hamari proprietary <strong>Double-Pressed Technology</strong>. Duniya bhar mein bats ek baar press kiye jate hain, lekin 7070 ke master craftsmen clefts ko do baar hydraulic pressure se guzarte hain. Isse wood fibers itne condense ho jate hain ki bat ko ek natural "spring effect" milta hai. Jab ball iske sweet spot se takrati hai, toh wo kisi goli ki raftar se boundary ke paar jati hai.</p>
+
+                <h3 style="color: var(--brand-yellow); font-size: 2rem; margin-top: 40px;">2. Hand-Selected Kashmir Willow Legacy</h3>
+                <p>Hum sirf wahi Kashmir Willow select karte hain jo high altitude orchards mein uugta hai. Hamare experts grains ki counting aur wood ki density check karne ke baad hi use select karte hain. Yahi wajah hai ki hamara willow durability mein English willow ko takkar deta hai aur tennis cricket ki hard ball ka asar jhelne mein saksham hai.</p>
+
+                <h3 style="color: var(--brand-yellow); font-size: 2rem; margin-top: 40px;">3. Trusted by Global Legends</h3>
+                <p>7070 Sports aaj ek global community ban chuka hai. Hamare products <strong>Jagat Sarkar, Vivek Shelar, aur Sarfaraz Bahubali</strong> jaise superstars ki pehli pasand hain. In players ka bharosa hi hamari sabse badi kamai hai. Ayodhya mein hum wahi same professional experience har local player ko dena chahte hain taaki Ayodhya se bhi agla bada star nikle.</p>
+
+                <h3 style="color: var(--brand-yellow); font-size: 2rem; margin-top: 40px;">4. Beyond Bats: A Complete Ecosystem</h3>
+                <p>Store par hum sirf bats nahi, balki specialized tennis cricket accessories bhi rakhte hain. Hamare <strong>Shock-Absorbing Handles</strong> 12-piece Sarawak cane se bane hote hain jo ball impact ke vibration ko aapke haatho tak nahi pahunchne dete. Hamari premium apparel line aapko field par cool aur comfortable rakhti hai, chahe garmi kitni bhi kyun na ho.</p>
+
+                <h3 style="color: var(--brand-yellow); font-size: 2rem; margin-top: 40px;">5. Our Vision for Tomorrow</h3>
+                <p>Hum Ayodhya mein sirf ek dukan nahi chala rahe, hum ek sports culture build kar rahe hain. Hamara aane wala vision tournaments organize karwana aur local talent ko sponsor karna hai. Jab aap 7070 ka bat uthate hain, toh aap sirf wood nahi, balki hazaron players ka vishwas aur 7070 ki legacy ko apne saath lekar chalte hain. Aaiye, is safar ka hissa banein.</p>
+            </div>
+
+            <button onclick="toggleMegaLegacy()" id="megaBtn" style="background: var(--brand-yellow); color: #000; border: none; padding: 20px 50px; font-weight: 800; cursor: pointer; border-radius: 60px; margin-top: 45px; transition: 0.4s; font-size: 1.2rem; box-shadow: 0 15px 30px rgba(241, 196, 15, 0.4); text-transform: uppercase;">
+                Explore The Full Legacy
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // FIX: Ye function name aur ID ekdum match hone chahiye
+    function toggleMegaLegacy() {
+        var content = document.getElementById("mega-legacy-content");
+        var btn = document.getElementById("megaBtn");
+
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            btn.innerHTML = "SHOW LESS HISTORY";
+            content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+            content.style.display = "none";
+            btn.innerHTML = "EXPLORE THE FULL LEGACY";
+        }
+    }
+</script>
+
+    <footer style="background: #050505; padding: 60px 8% 20px; border-top: 3px solid #f1c40f; color: #bbb;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+        <div>
+            <h3 style="color: #fff; margin-bottom: 20px;">7070 SPORTS AYODHYA</h3>
+            <p style="line-height: 1.8; font-size: 0.95rem;">Ayodhya's ultimate destination for professional gear. Engineered for power and trusted by champions.</p>
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <a href="https://instagram.com/7070sports" style="color:#fff; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/share/182jz8bkZF/" style="color:#fff; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@7070sports" style="color:#fff; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div>
+            <h4 style="color: #fff; margin-bottom: 20px; border-bottom: 2px solid #f1c40f; display: inline-block; padding-bottom: 5px;">QUICK LINKS</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="/" style="color: #888; text-decoration: none;">Home</a></li>
+                <li><a href="/bats" style="color: #888; text-decoration: none;">Bat Collection</a></li>
+                <li><a href="https://wa.me/919118033485" style="color: #888; text-decoration: none;">Order Support</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color: #fff; margin-bottom: 20px; border-bottom: 2px solid #f1c40f; display: inline-block; padding-bottom: 5px;">VISIT US</h4>
+            <p style="font-size: 0.95rem;"><i class="fas fa-map-marker-alt" style="color:#f1c40f;"></i> Ram Path Road, Angoori Bagh, Ayodhya, UP</p>
+            <p style="font-size: 0.95rem;"><i class="fas fa-phone" style="color:#f1c40f;"></i> +91 91180 33485</p>
+        </div>
+    </div>
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid #1a1a1a; font-size: 0.8rem; color: #555;">
+        © 2026 7070 SPORTS STORE AYODHYA. ALL RIGHTS RESERVED.
+    </div>
+</footer>
+
+    <script>
+        // Hero Slider
+        const sliderImgs = ["/static/7070_sports_lko/sachin.jpeg", "/static/7070_sports_lko/sachin2.jpeg", "/static/7070_sports_lko/sachin3.jpeg"];
+        let slideIdx = 0;
+        const heroBg = document.getElementById('hero-bg');
+        function slideHero() { if(heroBg) { heroBg.style.backgroundImage = `url('${sliderImgs[slideIdx]}')`; slideIdx = (slideIdx+1)%sliderImgs.length; } }
+        slideHero(); setInterval(slideHero, 4500);
+
+        // Toggle Functions
+        function toggleProAbout() {
+            var x = document.getElementById("pro-about-more");
+            var btn = document.getElementById("proAboutBtn");
+            if (x.style.display === "none") { x.style.display = "block"; btn.innerHTML = "SHOW LESS"; }
+            else { x.style.display = "none"; btn.innerHTML = "READ FULL STORY"; }
+        }
+        function toggleBatMaster() {
+            var x = document.getElementById("bat-master-text");
+            var btn = document.getElementById("batMasterBtn");
+            if (x.style.display === "none") { x.style.display = "block"; btn.innerHTML = "SHOW LESS"; }
+            else { x.style.display = "none"; btn.innerHTML = "READ TECHNICAL SPECS"; }
+        }
+    </script>
+</body>
+</html>
