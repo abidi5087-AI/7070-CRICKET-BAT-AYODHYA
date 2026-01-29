@@ -121,6 +121,10 @@
 .footer-links a { color: #bbb; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
 .footer-links a:hover { color: var(--aqua-jugnoo); padding-left: 8px; }
 .bottom-bar { border-top: 1px solid #222; margin-top: 50px; padding-top: 20px; text-align: center; color: #666; }
+        /* Duplicate social section ko hide karne ke liye */
+.social-section:nth-of-type(2) {
+    display: none !important;
+}
     </style>
 </head>
 <body>
@@ -274,30 +278,6 @@
         </div>
     </div>
 {% endif %}
-    <section class="social-section">
-    <h2 class="section-title">CONNECT WITH 7070 COMMUNITY</h2>
-    <p style="max-width: 600px; margin: 0 auto;">Latest updates, tournament highlights, and gear launches.</p>
-
-    <div class="social-grid">
-        <a href="https://instagram.com/7070sports" class="social-card insta-card" target="_blank">
-            <i class="fab fa-instagram"></i>
-            <h4>INSTAGRAM</h4>
-            <span>Follow for Reels & Updates</span>
-        </a>
-
-        <a href="#" class="social-card fb-card" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-            <h4>FACEBOOK</h4>
-            <span>Join our Cricket Community</span>
-        </a>
-
-        <a href="#" class="social-card yt-card" target="_blank">
-            <i class="fab fa-youtube"></i>
-            <h4>YOUTUBE</h4>
-            <span>Watch Bat Reviews & Power Hitting</span>
-        </a>
-    </div>
-</section>
 
 <section class="social-section">
     <h2 class="section-title">CONNECT WITH 7070 COMMUNITY</h2>
