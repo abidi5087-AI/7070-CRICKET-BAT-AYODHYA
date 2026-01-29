@@ -6,108 +6,57 @@
     <title>7070 CRICKET BAT AYODHYA | BEST PREMIUM BATS</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
-    :root { 
-        --aqua: #00adb5; 
-        --safed: #ffffff; 
-        --dark: #111111; 
-    }
+    /* 1. Global Reset & Header */
+    body { background-color: #ffffff !important; margin: 0; font-family: sans-serif; }
+    .site-header { background: #000 !important; display: flex; justify-content: space-between; padding: 10px; }
 
-    /* 1. Reset & Global Fix */
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html, body {
-        width: 100%; margin: 0; padding: 0;
-        overflow-x: hidden; background-color: var(--safed) !important;
-        font-family: sans-serif;
-    }
-
-    /* 2. Header Fix (Pehle Jaisa - Logo & Buttons) */
-    header, .site-header {
-        background: #000 !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 10px 15px !important;
-        height: auto !important;
-        min-height: 60px;
-        position: sticky; top: 0; z-index: 1000;
-    }
-
-    /* 3. Sachin Sir Hero Section (No More Cutting) */
+    /* 2. Banner: Sachin Sir & Jugnoo Heading */
     .hero-viewport {
+        background: #000 !important;
+        height: 400px !important;
+        display: flex; align-items: center; justify-content: center;
         position: relative;
-        width: 100%;
-        min-height: 350px; /* Mobile par height fix */
-        background: #000;
-        display: flex; flex-direction: column;
-        align-items: center; justify-content: center;
     }
-   #hero-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain !important; /* Isse Sachin sir ki puri photo dikhegi */
-    z-index: 0 !important; /* Isse photo parde ke piche nahi jayegi */
-    opacity: 1 !important;
+    #hero-bg {
+        width: 100% !important; height: 100% !important;
+        object-fit: contain !important; /* Sachin Sir ki puri photo dikhegi */
+        opacity: 1 !important;
     }
     .hero-content h1 {
-    color: #00adb5 !important; /* Pakka Jugnoo (Aqua) Color */
-    position: relative;
-    z-index: 10 !important;
-    font-weight: 900;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Taaki photo ke upar saaf dikhe */
-}
-    .hero-content h1 {
-        color: var(--aqua) !important; /* 7070 Ayodhya Jugnoo Aqua */
-        font-size: 1.8rem !important;
-        font-weight: 900;
-        text-transform: uppercase;
-        margin: 0;
-        text-shadow: 2px 2px 8px rgba(0,0,0,1);
+        color: #00adb5 !important; /* 7070 Ayodhya Aqua/Jugnoo Color */
+        font-size: 2rem !important;
+        z-index: 10;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
-    /* 4. CONTENT CLARITY (Black Shade Remover) */
-  section, .engineer-section, .rating-section, .care-weapon, .faq-section {
-    background: #ffffff !important; 
-    background-image: none !important; /* Purani saari kaali shade yahan se hategi */
-    color: #000000 !important; /* Text white par black dikhega */
-}
-    /* P, Li, Card-text Visibility Fix */
-    p, span, li, .card-text, .description, .faq-answer {
-        color: var(--dark) !important; /* Ab content white par black dikhega */
+    /* 3. FIX: Boxes se Kaala Background Hatana (Rating, FAQ, Care) */
+    .item-card, .rating-card, .faq-item, .card, .care-box, [class*="card"] {
+        background-color: #ffffff !important; /* Boxes ab safed honge */
+        background-image: none !important;
+        border: 1px solid #eeeeee !important; /* Halka border taaki safed par dikhe */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+
+    /* 4. Text Clarity: Boxes ke andar ka text ab Aqua nahi, Black dikhega */
+    p, span, li, .card-text, .description, .faq-answer, h4 {
+        color: #1a1a1a !important; /* Pure Black text safed background par */
         opacity: 1 !important;
         text-shadow: none !important;
-        font-size: 1rem;
-        line-height: 1.6;
     }
 
-    /* 5. IMAGE ZOOM FIX (Event Gallery & Ambassador) */
-    .item-card img, .event-gallery img, .ambassador-section img, .card img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 250px;
-        object-fit: contain !important; /* Zoom hat gaya, puri pic aayegi */
-        border-radius: 8px;
-        display: block;
-        margin: 0 auto 10px;
-    }
-
-    /* Headings Aqua */
-    h2, h3, .section-title, .brand-ambassadors h2 {
-        color: var(--aqua) !important;
+    /* 5. Section Titles */
+    h2, h3, .section-title {
+        color: #00adb5 !important; /* Sirf headings Aqua rahengi */
         text-align: center;
         text-transform: uppercase;
-        font-weight: 800;
-        margin-top: 10px;
     }
 
-    /* 6. Cards Styling */
-    .item-card, .rating-card, .faq-item {
-        background: #fcfcfc !important;
-        border: 1px solid #eee !important;
-        border-radius: 12px;
-        padding: 15px;
-        margin-bottom: 20px;
+    /* 6. Ambassador Photo Zoom Fix */
+    .ambassador-section img, .event-gallery img {
         width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* Photo kategi nahi */
+        max-height: 300px;
     }
 </style>
 </head>
