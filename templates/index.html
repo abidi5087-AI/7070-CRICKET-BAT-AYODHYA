@@ -41,17 +41,21 @@
         display: flex; flex-direction: column;
         align-items: center; justify-content: center;
     }
-    #hero-bg {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important; /* Isse Sachin sir ki puri photo dikhegi */
-        opacity: 0.8;
+   #hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* Isse Sachin sir ki puri photo dikhegi */
+    z-index: 0 !important; /* Isse photo parde ke piche nahi jayegi */
+    opacity: 1 !important;
     }
-    .hero-content {
-        position: absolute; top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5; text-align: center; width: 90%;
-    }
+    .hero-content h1 {
+    color: #00adb5 !important; /* Pakka Jugnoo (Aqua) Color */
+    position: relative;
+    z-index: 10 !important;
+    font-weight: 900;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Taaki photo ke upar saaf dikhe */
+}
     .hero-content h1 {
         color: var(--aqua) !important; /* 7070 Ayodhya Jugnoo Aqua */
         font-size: 1.8rem !important;
@@ -62,15 +66,11 @@
     }
 
     /* 4. CONTENT CLARITY (Black Shade Remover) */
-    section, .engineer-section, .rating-section, .care-weapon, .faq-section {
-        background: var(--safed) !important;
-        background-image: none !important; /* Kaali parchayi khatam */
-        color: var(--dark) !important;
-        padding: 30px 15px !important;
-        position: relative;
-        display: block !important;
-    }
-
+  section, .engineer-section, .rating-section, .care-weapon, .faq-section {
+    background: #ffffff !important; 
+    background-image: none !important; /* Purani saari kaali shade yahan se hategi */
+    color: #000000 !important; /* Text white par black dikhega */
+}
     /* P, Li, Card-text Visibility Fix */
     p, span, li, .card-text, .description, .faq-answer {
         color: var(--dark) !important; /* Ab content white par black dikhega */
