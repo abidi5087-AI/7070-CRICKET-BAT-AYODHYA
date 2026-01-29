@@ -6,115 +6,74 @@
     <title>7070 CRICKET BAT AYODHYA | BEST PREMIUM BATS</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
-    :root { 
-        --aqua: #00adb5; 
-        --white: #ffffff; 
-        --text-dark: #1a1a1a; 
-    }
-
-    /* 1. Reset & Layout Fix */
+    /* 1. Reset & Full Width */
     * { box-sizing: border-box; }
-    body { 
-        margin: 0; padding: 0; 
-        background: var(--white) !important; 
-        overflow-x: hidden; 
-        font-family: sans-serif;
-    }
+    body { margin: 0; padding: 0; overflow-x: hidden; background: #fff !important; }
 
-    /* 2. Top Header (Pehle Jaisa) */
-    .site-header {
-        background: #000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5%;
-        height: 60px;
-    }
-    .logo-container { display: flex; align-items: center; gap: 10px; }
-    .logo-text { color: var(--aqua) !important; font-weight: bold; font-size: 1.2rem; }
-
-    /* 3. Sachin Sir Hero Section (Image Fix) */
+    /* 2. Banner Fix: Sachin Sir & Jugnoo (Aqua) Text */
     .hero-viewport {
+        background-color: #000;
+        height: 55vh; /* Mobile ke liye perfect height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        width: 100%;
-        height: auto; /* Height auto taaki image ke hisab se adjust ho */
-        background: #000;
-        text-align: center;
     }
+
     #hero-bg {
-        width: 100%;
-        max-height: 450px; /* Mobile par zyada badi na ho */
-        object-fit: contain; /* Isse photo kategi nahi, puri dikhegi */
-        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Photo kategi nahi, puri dikhegi */
+        opacity: 1 !important; /* Sachin sir ekdum saaf */
     }
-    .hero-content {
-        padding: 20px;
-        background: #000; /* Text ke piche black base taaki aqua chamke */
-    }
+
     .hero-content h1 {
-        color: var(--aqua) !important;
-        font-size: 1.8rem;
-        margin: 0;
+        color: #00adb5 !important; /* Pakka Jugnoo (Aqua) Color */
+        font-size: 2.2rem !important;
+        font-weight: 900 !important;
         text-transform: uppercase;
-    }
-
-    /* 4. Section & Visibility (Clear White Background) */
-    section, .about-section, .engineer-section {
-        background: var(--white) !important;
-        padding: 30px 5% !important;
-        width: 100%;
-    }
-    .section-title, h2 {
-        color: var(--aqua) !important;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Text chamkega */
+        position: absolute;
+        z-index: 10;
+        width: 90%;
         text-align: center;
-        font-size: 1.6rem;
-        margin-bottom: 20px;
     }
 
-    /* 5. Text Clarity (No Blur, No Shadows) */
-    p, .card-text, .description {
-        color: var(--text-dark) !important;
-        font-size: 1rem;
-        line-height: 1.6;
-        text-align: left;
+    /* 3. Global Section Fix: Black Shade Removal (All 4 Sections) */
+    section, 
+    .engineer-section, 
+    .rating-section, 
+    .care-weapon, 
+    .faq-section {
+        background: #ffffff !important; /* Pure White */
+        background-image: none !important; /* Kaali shade jadh se khatam */
+        padding: 40px 15px !important;
+        display: block !important;
+    }
+
+    /* Headings Jugnoo Color */
+    h2, h3, .section-title {
+        color: #00adb5 !important;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    /* Content Clarity (White par Black Text) */
+    p, .card-text, .description, li, .faq-answer {
+        color: #1a1a1a !important; /* Saaf dikhne wala black */
+        opacity: 1 !important;
         text-shadow: none !important;
     }
 
-    /* 6. Image Gallery / Cards (Normal Size) */
-    .item-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-    .item-card {
+    /* 4. Full Width Expand */
+    .item-card, .rating-card {
+        width: 100% !important;
         margin-bottom: 20px;
-        background: #fff;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 12px;
         border: 1px solid #eee;
-        padding: 10px;
-
-        /* --- Banner Heading Aqua & Sachin Sir Photo Fix --- */
-.hero-content h1 {
-    color: #00adb5 !important; /* 7070 Ayodhya Aqua ho jayega */
-    font-size: 2.2rem;
-    font-weight: 900;
-}
-
-#hero-bg {
-    object-fit: contain !important; /* Photo kategi nahi */
-    opacity: 1 !important; /* Sachin sir ekdum saaf dikhenge */
-}
-
-/* --- All Sections Black Shade Remover --- */
-section, .care-weapon, .rating-section, .faq-section, .engineer-section {
-    background-color: #ffffff !important; /* Pure White background */
-    background-image: none !important; /* Kaali shade hat jayegi */
-}
-
-/* --- Content Text Clarity --- */
-p, .card-text, .description, li {
-    color: #1a1a1a !important; /* Safed background par saaf black text */
-    opacity: 1 !important;
-}
+    }
 </style>
 </head>
 <body>
