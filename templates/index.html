@@ -6,199 +6,221 @@
     <title>7070 CRICKET BAT AYODHYA | BEST PREMIUM BATS</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* --- AQUA JUGNOO THEME UPDATES --- */
         :root { 
             --brand-green: #1a3c0e; 
-            --brand-yellow: #00ffff; /* Aqua Color */
-            --dark-bg: #ffffff;      /* Background White */
-            --card-bg: #f9f9f9;      /* Light Cards */
-            --text-main: #222222;    /* Dark Text for readability */
+            --aqua-jugnoo: #20b2aa; /* Exact shade from your image */
+            --dark-bg: #ffffff; 
+            --card-bg: #fdfdfd; 
         }
-
-        body { 
-            margin:0; 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background: var(--dark-bg); 
-            color: var(--text-main); 
-            overflow-x: hidden; 
-        }
-
-        /* Header logic */
-        .site-header { 
-            background: #000000 !important; /* Header black hi rakha hai premium look ke liye */
-            padding: 10px 6%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 2px solid #00ffff; 
-            position: sticky; 
-            top: 0; 
-            z-index: 10000; 
-            backdrop-filter: blur(10px); 
-        }
-
-        .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
-
-        /* Hero Section */
-        .hero-viewport { 
-            position: relative; 
-            height: 70vh; 
-            width: 100%; 
-            overflow: hidden; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            background: #000; /* Hero area dark taaki text chamke */
-        }
-        #hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; background-position: center; transition: 1.5s; filter: brightness(0.5); }
-
-        .container { padding: 40px 4%; }
-
-        /* SARI HEADINGS AQUA JUGNOO */
-        .section-title, h2, h3, h4 { 
-            text-align: center; 
-            color: #00ffff !important; /* Aqua Color */
-            margin-bottom: 30px; 
-            text-transform: uppercase; 
-            font-weight: 800;
-        }
-
-        .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-
-        /* Cards Style */
-        .item-card { 
-            background: var(--card-bg); 
-            border-radius: 15px; 
-            overflow: hidden; 
-            border: 1px solid #ddd; 
-            transition: 0.3s; 
-            text-align: center; 
-            color: #333;
-        }
-        .item-card img { width: 100%; height: 380px; object-fit: cover; }
-
-        .read-btn { background: #00ffff; color: #000; border: none; padding: 12px 35px; font-weight: 800; cursor: pointer; border-radius: 50px; margin-top: 25px; transition: 0.3s; }
+        body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--dark-bg); color: #222; overflow-x: hidden; }
         
-        /* Layout tweaks for White Background */
-        p { color: #444; }
-        strong { color: #000; }
+        /* HEADINGS: Aqua Jugnoo */
+        .section-title, h1, h2, h3, h4 { color: var(--aqua-jugnoo) !important; text-transform: uppercase; font-weight: 800; text-align: center; margin-bottom: 30px; }
+        
+        .site-header { background: #000; padding: 12px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--aqua-jugnoo); position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px); }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
+        
+        .hero-viewport { position: relative; height: 70vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+        #hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; background-position: center; transition: 1.5s; filter: brightness(0.5); }
+        
+        .container { padding: 40px 4%; }
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        
+        .item-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #eee; transition: 0.3s; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .item-card img { width: 100%; height: 380px; object-fit: cover; }
+        
+        .read-btn { background: var(--aqua-jugnoo); color: #fff; border: none; padding: 12px 35px; font-weight: 800; cursor: pointer; border-radius: 50px; margin-top: 25px; transition: 0.3s; }
+        .footer { background: #000; padding: 50px 8% 20px; border-top: 4px solid var(--aqua-jugnoo); color: #bbb; }
+        
+        p { line-height: 1.6; color: #444; }
     </style>
 </head>
 <body>
 
 <header class="site-header">
     <div style="display: flex; align-items: center; gap: 12px;">
-        <img src="{{ url_for('static', filename='7070_sports_lko/logo.jpeg') }}" style="height: 45px; width: 45px; border-radius: 50%; border: 2px solid #00ffff; object-fit: cover;">
-        <div style="font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; color: #fff;">7070 <span style="color:#00ffff">SPORTS</span></div>
+        <img src="{{ url_for('static', filename='7070_sports_lko/logo.jpeg') }}" style="height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--aqua-jugnoo); object-fit: cover;">
+        <div style="font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; color: #fff;">7070 <span style="color:var(--aqua-jugnoo)">SPORTS</span></div>
     </div>
     <nav style="display: flex; align-items: center; gap: 10px;">
-        <a href="/" style="color: #fff; text-decoration: none; font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Home</a>
-        <a href="/bats" style="background: #00ffff; color: black; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;"><i class="fas fa-shopping-cart"></i> SHOP NOW</a>
-        <a href="https://wa.me/919118033485" style="background: #25D366; color: white; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+        <a href="/" style="color: #fff; text-decoration: none; font-weight: 600; font-size: 0.8rem;">HOME</a>
+        <a href="/bats" style="background: var(--aqua-jugnoo); color: #fff; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem;"><i class="fas fa-shopping-cart"></i> SHOP NOW</a>
+        <a href="https://wa.me/919118033485" style="background: #25D366; color: white; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
     </nav>
 </header>
 
-    {% if page == "home" %}
-        <div class="hero-viewport">
-            <div id="hero-bg"></div>
-            <div style="z-index: 10;">
-                <h1 style="font-size: 3.5rem; color: #00ffff; font-weight:900; margin:0;">7070 CRICKET BAT AYODHYA</h1>
-                <p style="font-size: 1.4rem; color: #fff;">The Ultimate Destination for Tennis Cricket Professionals</p>
-                <a href="/bats" style="background: #00ffff; color: #000; padding: 15px 40px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; margin-top: 20px;">EXPLORE COLLECTION</a>
+{% if page == "home" %}
+    <div class="hero-viewport">
+        <div id="hero-bg"></div>
+        <div style="z-index: 10;">
+            <h1 style="font-size: 3.5rem; color: var(--aqua-jugnoo); margin:0;">7070 CRICKET BAT AYODHYA</h1>
+            <p style="font-size: 1.4rem; color: #fff;">The Ultimate Destination for Tennis Cricket Professionals</p>
+            <a href="/bats" style="background: var(--aqua-jugnoo); color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; margin-top: 20px;">EXPLORE COLLECTION</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Brand Ambassadors</h2>
+        <div class="content-grid">
+            {% for amb in ambassadors %}
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
+                <p style="padding:15px; font-weight:bold;">{{ amb.name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="section-title" style="margin-top: 60px;">Event Highlights</h2>
+        <div class="content-grid">
+            {% for item in gallery %}
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/{{ item.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
+                <p style="padding:15px; font-size:0.9rem;">{{ item.title }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div style="background: #f4ffff; padding: 45px; border-radius: 20px; border-left: 5px solid var(--aqua-jugnoo); margin: 60px 0;">
+            <h2>WHY JOIN 7070 SPORTS?</h2>
+            <p>7070 Sports Ayodhya is not just a store, it's a legacy. We provide elite equipment to help local talent perform at their best.</p>
+            <div id="pro-about-more" style="display: none; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 15px;">
+                <p>With over 500+ franchises across India, we are the fastest-growing brand. Our equipment is trusted by legends like Jagat Sarkar and Vivek Shelar.</p>
+            </div>
+            <button onclick="toggleProAbout()" id="proAboutBtn" class="read-btn">READ FULL STORY</button>
+        </div>
+
+        <h2 class="section-title">7070 BAT ANATOMY</h2>
+        <div class="content-grid" style="background: #f9f9f9; padding: 30px; border-radius: 30px; align-items: center;"> 
+            <div>
+                <div style="margin-bottom: 25px; border-left: 3px solid var(--aqua-jugnoo); padding-left: 15px;">
+                    <h4>DOUBLE-PRESSED CORE</h4>
+                    <p>Maximum power aur explosive ping ke liye do baar press kiya gaya willow.</p>
+                </div>
+                <div style="margin-bottom: 25px; border-left: 3px solid var(--aqua-jugnoo); padding-left: 15px;">
+                    <h4>12-PIECE CANE HANDLE</h4>
+                    <p>Professional Sarawak cane handle jo har jhatke (vibration) ko absorb kar leta hai.</p>
+                </div>
+                <div style="margin-bottom: 25px; border-left: 3px solid var(--aqua-jugnoo); padding-left: 15px;">
+                    <h4>DUCK-BILL PROFILE</h4>
+                    <p>Aerodynamic shape jo bat ka pickup halka aur swing speed tez karti hai.</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
         </div>
 
-        <div class="container">
-            <h2 class="section-title">Brand Ambassadors</h2>
-            <div class="content-grid">
-                {% for amb in ambassadors %}
-                <div class="item-card">
-                    <img src="/static/7070_sports_lko/{{ amb.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
-                    <p style="padding:15px; font-weight:bold; color: #222;">{{ amb.name }}</p>
-                </div>
-                {% endfor %}
+        <h2 class="section-title" style="margin-top: 80px;">OUR CRAFTING PROCESS</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+            <div style="background: #fff; padding: 20px; border-radius: 20px; text-align: center; border: 1px solid #eee; border-bottom: 4px solid var(--aqua-jugnoo);">
+                <h4>01. GRADE-1 SELECTION</h4>
+                <p>Hum chunhte hain sirf top quality Kashmir Willow.</p>
             </div>
-
-            <h2 class="section-title" style="margin-top: 60px;">Event Highlights</h2>
-            <div class="content-grid">
-                {% for item in gallery %}
-                <div class="item-card">
-                    <img src="/static/7070_sports_lko/{{ item.img }}" onerror="this.src='https://via.placeholder.com/400x500'">
-                    <p style="padding:15px; font-size:0.9rem; color: #222;">{{ item.title }}</p>
-                </div>
-                {% endfor %}
+            <div style="background: #fff; padding: 20px; border-radius: 20px; text-align: center; border: 1px solid #eee; border-bottom: 4px solid var(--aqua-jugnoo);">
+                <h4>02. MASTER SHAPING</h4>
+                <p>Har bat ko haath se shape diya jata hai perfect balance ke liye.</p>
             </div>
-
-            <div style="background: #f0fdfd; padding: 45px; border-radius: 20px; border-left: 5px solid #00ffff; margin: 40px 0;">
-                <h2>WHY JOIN 7070 SPORTS?</h2>
-                <p style="line-height: 1.8; font-size: 1.1rem;">
-                    7070 Sports Ayodhya is not just a store, it's a legacy. We provide elite equipment to help local talent perform at their best.
-                </p>
-                <div id="pro-about-more" style="display: none; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 15px;">
-                    <p>With over 500+ franchises across India, we are the fastest-growing brand in tennis cricket. Our equipment is trusted by legends like Jagat Sarkar and Vivek Shelar.</p>
-                </div>
-                <button onclick="toggleProAbout()" id="proAboutBtn" style="background: #00ffff; color: #000; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 800; cursor: pointer; margin-top: 20px;">
-                    READ FULL STORY
-                </button>
-            </div>
-
-            <div class="container" style="background: #fff;">
-                <h2 class="section-title">7070 BAT ANATOMY</h2>
-                <div class="content-grid" style="align-items: center;"> 
-                    <div>
-                        <div style="margin-bottom: 25px; border-left: 3px solid #00ffff; padding-left: 15px;">
-                            <h4>DOUBLE-PRESSED CORE</h4>
-                            <p>Maximum power aur explosive ping ke liye do baar press kiya gaya willow.</p>
-                        </div>
-                        <div style="margin-bottom: 25px; border-left: 3px solid #00ffff; padding-left: 15px;">
-                            <h4>12-PIECE CANE HANDLE</h4>
-                            <p>Professional Sarawak cane handle jo har jhatke (vibration) ko absorb kar leta hai.</p>
-                        </div>
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/7070_sports_lko/whatsapp 10.32.31 at PM.jpg" style="max-width: 100%; border-radius: 15px;" onerror="this.src='https://via.placeholder.com/400x600?text=7070+Bat+Image'">
-                    </div>
-                </div>
+            <div style="background: #fff; padding: 20px; border-radius: 20px; text-align: center; border: 1px solid #eee; border-bottom: 4px solid var(--aqua-jugnoo);">
+                <h4>03. FINAL PING TEST</h4>
+                <p>Dispatch se pehle har bat ka ping test kiya jata hai.</p>
             </div>
         </div>
-    {% elif page == "bats" %}
-        <div class="container">
-            <h1 class="section-title">Professional Bat Engineering</h1>
-            <div class="content-grid">
-                {% for bat in bats %}
-                <div class="item-card">
-                    <img src="/static/7070_sports_lko/{{ bat.img }}">
-                    <div style="padding:20px;">
-                        <h3 style="color: #000 !important;">{{ bat.name }}</h3>
-                        <p style="color:#00ffff; font-size:1.6rem; font-weight:bold;">{{ bat.price }}</p>
-                        <a href="https://wa.me/919118033485" style="background:#25D366; color:white; padding:12px; display:block; text-decoration:none; border-radius:10px; font-weight:bold;">ORDER NOW</a>
-                    </div>
-                </div>
-                {% endfor %}
+
+        <div style="background: #000; padding: 60px 0; margin: 80px -5% 0 -5%;">
+            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <div><h2 style="font-size: 3.5rem; margin:0;">500+</h2><p style="color:#fff">Franchises India</p></div>
+                <div><h2 style="font-size: 3.5rem; margin:0;">10k+</h2><p style="color:#fff">Happy Players</p></div>
+                <div><h2 style="font-size: 3.5rem; margin:0;">Grade-1</h2><p style="color:#fff">Kashmir Willow</p></div>
             </div>
         </div>
-    {% endif %}
 
-    <footer style="background: #000; padding: 60px 8% 20px; border-top: 3px solid #00ffff; color: #bbb;">
-        <div style="text-align: center;">
-            <p>© 2026 7070 SPORTS STORE AYODHYA. ALL RIGHTS RESERVED.</p>
+        <h2 class="section-title" style="margin-top: 80px;">CARE FOR YOUR WEAPON</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px dashed var(--aqua-jugnoo); text-align: center;">
+                <i class="fas fa-oil-can" style="color: var(--aqua-jugnoo); font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h4>PRO OILING</h4>
+                <p>Raw linseed oil ki halki layer lagayein.</p>
+            </div>
+            <div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px dashed var(--aqua-jugnoo); text-align: center;">
+                <i class="fas fa-hammer" style="color: var(--aqua-jugnoo); font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h4>PRO KNOCKING</h4>
+                <p>7070 bats pre-knocked aate hain.</p>
+            </div>
         </div>
-    </footer>
 
-    <script>
-        const sliderImgs = ["/static/7070_sports_lko/sachin.jpeg", "/static/7070_sports_lko/sachin2.jpeg"];
-        let slideIdx = 0;
-        const heroBg = document.getElementById('hero-bg');
-        function slideHero() { if(heroBg) { heroBg.style.backgroundImage = `url('${sliderImgs[slideIdx]}')`; slideIdx = (slideIdx+1)%sliderImgs.length; } }
-        slideHero(); setInterval(slideHero, 4500);
+        <h2 class="section-title" style="margin-top: 80px;">QUESTIONS? WE HAVE ANSWERS</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto;">
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px solid #eee;">
+                <h4>7070 Bats lightweight kaise hote hain?</h4>
+                <p>Hum professional duck-bill profile ka use karte hain.</p>
+            </div>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px solid #eee;">
+                <h4>Kya aap poore India mein delivery karte hain?</h4>
+                <p>Ji haan! 500+ franchises ke network se delivery fast hai.</p>
+            </div>
+        </div>
 
-        function toggleProAbout() {
-            var x = document.getElementById("pro-about-more");
-            var btn = document.getElementById("proAboutBtn");
-            if (x.style.display === "none") { x.style.display = "block"; btn.innerHTML = "SHOW LESS"; }
-            else { x.style.display = "none"; btn.innerHTML = "READ FULL STORY"; }
-        }
-    </script>
+        <div style="background: #f9f9f9; padding: 40px; border-radius: 20px; border-top: 6px solid var(--aqua-jugnoo); margin-top: 80px;">
+            <h2>7070 Sports Ayodhya Legacy</h2>
+            <div id="mega-legacy-content" style="display: none; margin-top: 25px;">
+                <p>7070 Sports Ayodhya is more than just a business; it is a vision inspired by the sacred land of Ayodhya. Our <strong>Double-Pressed Tech</strong> is what makes us unique.</p>
+            </div>
+            <button onclick="toggleMegaLegacy()" id="megaBtn" class="read-btn">EXPLORE THE FULL LEGACY</button>
+        </div>
+    </div>
+
+{% elif page == "bats" %}
+    <div class="container">
+        <h1 class="section-title">Professional Bat Collection</h1>
+        <div class="content-grid">
+            {% for bat in bats %}
+            <div class="item-card">
+                <img src="/static/7070_sports_lko/{{ bat.img }}">
+                <div style="padding:20px;">
+                    <h3 style="color:#222 !important;">{{ bat.name }}</h3>
+                    <p style="color:var(--aqua-jugnoo); font-size:1.6rem; font-weight:bold;">{{ bat.price }}</p>
+                    <a href="https://wa.me/919118033485" style="background:#25D366; color:white; padding:12px; display:block; text-decoration:none; border-radius:10px; font-weight:bold;">ORDER NOW</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+<footer class="footer">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+        <div><h3>7070 SPORTS AYODHYA</h3><p>Ayodhya's ultimate destination for professional gear.</p></div>
+        <div><h4>QUICK LINKS</h4><p>Home | Bat Collection | Support</p></div>
+        <div><h4>VISIT US</h4><p>Ram Path Road, Angoori Bagh, Ayodhya</p></div>
+    </div>
+    <div style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem;">
+        © 2026 7070 SPORTS STORE AYODHYA. ALL RIGHTS RESERVED.
+    </div>
+</footer>
+
+<script>
+    // SACHIN HERO SLIDER
+    const sliderImgs = ["/static/7070_sports_lko/sachin.jpeg", "/static/7070_sports_lko/sachin2.jpeg", "/static/7070_sports_lko/sachin3.jpeg"];
+    let slideIdx = 0;
+    const heroBg = document.getElementById('hero-bg');
+    function slideHero() { 
+        if(heroBg) { 
+            heroBg.style.backgroundImage = `url('${sliderImgs[slideIdx]}')`; 
+            slideIdx = (slideIdx+1)%sliderImgs.length; 
+        } 
+    }
+    slideHero(); setInterval(slideHero, 4500);
+
+    // TOGGLE FUNCTIONS
+    function toggleProAbout() {
+        var x = document.getElementById("pro-about-more");
+        x.style.display = (x.style.display === "none") ? "block" : "none";
+    }
+    function toggleMegaLegacy() {
+        var x = document.getElementById("mega-legacy-content");
+        x.style.display = (x.style.display === "none") ? "block" : "none";
+    }
+</script>
+
 </body>
 </html>
