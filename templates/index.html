@@ -5,60 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7070 CRICKET BAT AYODHYA | BEST PREMIUM BATS</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>
-    /* 1. Global Reset & Header */
-    body { background-color: #ffffff !important; margin: 0; font-family: sans-serif; }
-    .site-header { background: #000 !important; display: flex; justify-content: space-between; padding: 10px; }
+/* --- AQUA JUGNOO: GENERAL STYLES --- */
+:root {
+    --brand-green: #00ffff; /* Aqua Color */
+    --white-bg: #ffffff;
+    --dark-text: #222222;
+}
 
-    /* 2. Banner: Sachin Sir & Jugnoo Heading */
-    .hero-viewport {
-        background: #000 !important;
-        height: 400px !important;
-        display: flex; align-items: center; justify-content: center;
-        position: relative;
-    }
-    #hero-bg {
-        width: 100% !important; height: 100% !important;
-        object-fit: contain !important; /* Sachin Sir ki puri photo dikhegi */
-        opacity: 1 !important;
-    }
-    .hero-content h1 {
-        color: #00adb5 !important; /* 7070 Ayodhya Aqua/Jugnoo Color */
-        font-size: 2rem !important;
-        z-index: 10;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-    }
+body {
+    background-color: var(--white-bg); /* Background White kar diya */
+    color: var(--dark-text);
+}
 
-    /* 3. FIX: Boxes se Kaala Background Hatana (Rating, FAQ, Care) */
-    .item-card, .rating-card, .faq-item, .card, .care-box, [class*="card"] {
-        background-color: #ffffff !important; /* Boxes ab safed honge */
-        background-image: none !important;
-        border: 1px solid #eeeeee !important; /* Halka border taaki safed par dikhe */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-    }
+.root {
+    --brand-green: #00ffff;
+    --dark-bg: #ffffff;
+    font-size: 0.9rem;
+}
 
-    /* 4. Text Clarity: Boxes ke andar ka text ab Aqua nahi, Black dikhega */
-    p, span, li, .card-text, .description, .faq-answer, h4 {
-        color: #1a1a1a !important; /* Pure Black text safed background par */
-        opacity: 1 !important;
-        text-shadow: none !important;
-    }
+.hero-card img {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
 
-    /* 5. Section Titles */
-    h2, h3, .section-title {
-        color: #00adb5 !important; /* Sirf headings Aqua rahengi */
-        text-align: center;
-        text-transform: uppercase;
-    }
+/* --- AQUA JUGNOO: HEADER STYLES --- */
+#hero-viewport {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    background-color: #ffffff;
+}
 
-    /* 6. Ambassador Photo Zoom Fix */
-    .ambassador-section img, .event-gallery img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important; /* Photo kategi nahi */
-        max-height: 300px;
-    }
-</style>
+.section-title {
+    color: #00ffff; /* Heading Aqua Color */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* --- AQUA JUGNOO: GRID STYLES --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: #ffffff;
+}
+
+.recent-grid {
+    border: 1px solid #eee;
+    padding: 10px;
+}
 </head>
 <body>
 
