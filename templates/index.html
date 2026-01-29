@@ -7,95 +7,107 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
     :root { 
-        --jugnoo-aqua: #00adb5; 
-        --pure-white: #ffffff; 
-        --deep-black: #111111; 
+        --aqua: #00adb5; 
+        --safed: #ffffff; 
+        --dark: #111111; 
     }
 
-    /* 1. Page & Layout Fix */
+    /* 1. Reset & Global Fix */
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
     html, body {
         width: 100%; margin: 0; padding: 0;
-        overflow-x: hidden;
-        background-color: var(--pure-white) !important;
+        overflow-x: hidden; background-color: var(--safed) !important;
+        font-family: sans-serif;
     }
-    * { box-sizing: border-box; }
 
-    /* 2. Header (Pehle Jaisa - Logo & Buttons) */
+    /* 2. Header Fix (Pehle Jaisa - Logo & Buttons) */
     header, .site-header {
         background: #000 !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 10px 15px !important;
-        height: 70px !important;
+        height: auto !important;
+        min-height: 60px;
+        position: sticky; top: 0; z-index: 1000;
     }
 
-    /* 3. Sachin Sir Hero Section & Aqua Heading */
+    /* 3. Sachin Sir Hero Section (No More Cutting) */
     .hero-viewport {
         position: relative;
-        width: 100%; height: 50vh;
+        width: 100%;
+        min-height: 350px; /* Mobile par height fix */
         background: #000;
-        display: flex; align-items: center; justify-content: center;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
     }
     #hero-bg {
-        width: 100% !important; height: 100% !important;
-        object-fit: contain !important; /* Zoom hatane ke liye */
-        opacity: 0.9;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Isse Sachin sir ki puri photo dikhegi */
+        opacity: 0.8;
+    }
+    .hero-content {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5; text-align: center; width: 90%;
     }
     .hero-content h1 {
-        color: var(--jugnoo-aqua) !important; /* Aqua color */
-        font-size: 2rem !important;
-        font-weight: 900 !important;
+        color: var(--aqua) !important; /* 7070 Ayodhya Jugnoo Aqua */
+        font-size: 1.8rem !important;
+        font-weight: 900;
         text-transform: uppercase;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.8) !important;
+        margin: 0;
+        text-shadow: 2px 2px 8px rgba(0,0,0,1);
     }
 
-    /* 4. RECHECKED: Black Shade Remover (Engineer, Questions, Rating, Care) */
-    section, 
-    .engineer-section, 
-    .rating-section, 
-    .care-weapon, 
-    .faq-section, 
-    .questions-container {
-        background: var(--pure-white) !important; /* Black shade khatam */
-        background-image: none !important;
-        padding: 40px 15px !important;
+    /* 4. CONTENT CLARITY (Black Shade Remover) */
+    section, .engineer-section, .rating-section, .care-weapon, .faq-section {
+        background: var(--safed) !important;
+        background-image: none !important; /* Kaali parchayi khatam */
+        color: var(--dark) !important;
+        padding: 30px 15px !important;
+        position: relative;
         display: block !important;
-        border: none !important;
     }
 
-    /* 5. Images Zoom Fix (Brand Ambassador & Gallery) */
-    .item-card img, .event-gallery img, .ambassador-section img, img {
-        max-width: 100% !important;
-        height: auto !important; 
-        object-fit: contain !important; /* Puri photo dikhegi, zoom nahi hogi */
-    }
-
-    /* 6. Content Visibility (White background par Clear Black text) */
+    /* P, Li, Card-text Visibility Fix */
     p, span, li, .card-text, .description, .faq-answer {
-        color: var(--deep-black) !important;
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
+        color: var(--dark) !important; /* Ab content white par black dikhega */
         opacity: 1 !important;
         text-shadow: none !important;
-        filter: none !important;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
-    h2, h3, .section-title {
-        color: var(--jugnoo-aqua) !important;
-        text-align: center;
-        font-weight: 800;
-        text-transform: uppercase;
-    }
-
-    /* Cards Layout */
-    .item-card, .rating-card {
+    /* 5. IMAGE ZOOM FIX (Event Gallery & Ambassador) */
+    .item-card img, .event-gallery img, .ambassador-section img, .card img {
         width: 100% !important;
+        height: auto !important;
+        max-height: 250px;
+        object-fit: contain !important; /* Zoom hat gaya, puri pic aayegi */
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    /* Headings Aqua */
+    h2, h3, .section-title, .brand-ambassadors h2 {
+        color: var(--aqua) !important;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 10px;
+    }
+
+    /* 6. Cards Styling */
+    .item-card, .rating-card, .faq-item {
         background: #fcfcfc !important;
         border: 1px solid #eee !important;
-        padding: 20px;
+        border-radius: 12px;
+        padding: 15px;
         margin-bottom: 20px;
-        border-radius: 10px;
+        width: 100% !important;
     }
 </style>
 </head>
