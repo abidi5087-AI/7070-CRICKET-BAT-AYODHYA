@@ -132,14 +132,19 @@
 <header class="site-header">
     <div style="display: flex; align-items: center; gap: 12px;">
         <img src="{{ url_for('static', filename='7070_sports_lko/logo.jpeg') }}" style="height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--aqua-jugnoo); object-fit: cover;">
-        <div style="font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; color: #fff;">7070 <span style="color: #ffffff";">SPORTS</span></div>
+        <div style="font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; color: #fff;">7070 <span style="color: #FFD700";">SPORTS</span></div>
     </div>
-    <nav style="display: flex; align-items: center; gap: 10px;">
-       
-         <a href="/bats" style="background: #f1c40f; color: #000; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;">
-    <i class="fas fa-shopping-cart"></i> SHOP NOW
-</a>
-    </nav>
+    <nav style="display: flex; align-items: center; gap: 12px;">
+    <a href="/" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 5px 8px;">HOME</a>
+
+    <a href="/bats" style="background: #FFD700; color: #000; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; gap: 5px; box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);">
+        <i class="fas fa-shopping-cart"></i> SHOP NOW
+    </a>
+
+    <a href="https://wa.me/9118033485" style="background: #25D366; color: #fff; padding: 8px 15px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; gap: 5px; box-shadow: 0 0 10px rgba(37, 211, 102, 0.3);">
+        <i class="fab fa-whatsapp"></i> WHATSAPP
+    </a>
+</nav>
 </header>
 
 {% if page == "home" %}
