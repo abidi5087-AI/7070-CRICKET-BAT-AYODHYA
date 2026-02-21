@@ -39,4 +39,5 @@ def bats():
     return render_template('index.html', page="bats", bats=all_bats)
 
 if __name__ == '__main__':
+
     app.run(debug=True)
