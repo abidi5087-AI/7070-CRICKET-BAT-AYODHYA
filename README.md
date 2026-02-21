@@ -1,6 +1,6 @@
 # 🏏 7070 Cricket Bat Ayodhya
 
-**🔗 Live Demo:** (https://seven070-cricket-bat-ayodhya.onrender.com/)
+**🔗 Live Demo:** (https://7070-sports.vercel.app/)
 
 Welcome to the official web portal of **7070 Cricket Bat Ayodhya**. We specialize in premium Grade-1 Kashmir Willow bats, handcrafted for professional tennis and leather ball cricket. Serving the cricket community in **Ayodhya and Lucknow** with top-tier gear.
 
